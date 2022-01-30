@@ -7,3 +7,10 @@ export const getAddress = async (latitude, longitude) => {
   );
   return response.data.results[0].formatted;
 };
+
+export const formatAddress = (address) =>
+  // remove unnamed locations
+  address
+    .split(",")
+    .filter((addressItem) => !addressItem.includes("unnamed"))
+    .join(",");
