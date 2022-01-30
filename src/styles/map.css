@@ -13,3 +13,17 @@ body {
     line-height: 23px;
 }
 
+
+.find-me-button {
+    box-shadow: rgb(0 0 0 / 30%) 0px 2px 6px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
