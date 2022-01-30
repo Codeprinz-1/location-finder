@@ -49,6 +49,26 @@ const Map = () => {
     });
   };
 
+  const getLocation = (map, maps) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const coordinates = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          showLocationOnMap(map, maps, coordinates);
+        },
+        (error) => {
+          alert("You need to allow access to location");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  };
+
   return (
     <Container className="map-wrapper">
       <GoogleMapReact
