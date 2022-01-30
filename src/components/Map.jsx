@@ -14,6 +14,9 @@ let infoWindow;
 let marker;
 
 const Map = () => {
+  const [zoom, setZoom] = useState(6);
+  const [center, setCenter] = useState(defaultCenter);
+
   return (
     <Container className="map-wrapper">
       <GoogleMapReact
