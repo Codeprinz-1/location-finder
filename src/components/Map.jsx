@@ -69,6 +69,17 @@ const Map = () => {
     }
   };
 
+  const addFindMeButton = ({ map, maps }) => {
+    const findMeButton = document.createElement("button");
+
+    findMeButton.classList.add("find-me-button");
+    findMeButton.innerText = "Find me";
+    findMeButton.onclick = () => {
+      getLocation(map, maps);
+    };
+    map.controls[maps.ControlPosition.TOP_CENTER].push(findMeButton);
+  };
+
   return (
     <Container className="map-wrapper">
       <GoogleMapReact
